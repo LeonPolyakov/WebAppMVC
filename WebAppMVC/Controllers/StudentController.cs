@@ -74,7 +74,7 @@ namespace WebAppMVC.Controllers
 
                 // get student from the mock database 
                 var std = studentList.Where(s => s.StudentId == minStudentId).FirstOrDefault(); //select the student from the  mock database whose Id matches the smallest one
-                logger.Log(LogLevel.Info, "Could not find valid student Id. Will default to Id = " + std.StudentId.ToString());
+                logger.Log(LogLevel.Warn, "Could not find valid student Id. Will default to Id = " + std.StudentId.ToString());
                 return View(std); // send the Student data model of the selected student to the Find view 
             }
             
@@ -108,7 +108,7 @@ namespace WebAppMVC.Controllers
 
                 UpdateModelWithTempData();   //    apply TempData values to the mock studentList database 
                 var std = studentList.Where(s => s.StudentId == minStudentId).FirstOrDefault(); //select the student from the  mock database whose Id matches the smallest one
-                logger.Log(LogLevel.Info, "Could not find valid student Id. Will default to Id = " + std.StudentId.ToString());
+                logger.Log(LogLevel.Warn, "Could not find valid student Id. Will default to Id = " + std.StudentId.ToString());
                 return View(std); // send the Student data model of the selected student to the Edit view 
             }           
         }
@@ -139,6 +139,7 @@ namespace WebAppMVC.Controllers
                 TempData["age"] = std.Age;
                 TempData["StudentGender"] = std.StudentGender;
                 logger.Log(LogLevel.Info, "Edited Student with ID = " + std.StudentId.ToString());
+                logger.Log(LogLevel.Info, "Added to TempData Student object " + std.StudentId.ToString());
                 return RedirectToAction("Index");
             }        
         }
@@ -178,9 +179,16 @@ namespace WebAppMVC.Controllers
                 {
                     Gender sGen;
                     sGender = TempData["StudentGender"].ToString(); // extract student gender from TempData
-                    if (Enum.TryParse(sGender, out sGen)) // convert gender from string to Enum value for later assignemnet to student object
+                    if (Enum.TryParse(sGender, true, out sGen)) // convert gender from string to Enum value for later assignemnet to student object, ignore case
                     {
+                        logger.Log(LogLevel.Info, "Parsing Student gender = " + sGen.ToString());
                         studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().StudentGender = sGen; //assign TempData student gender to the matching student object in  studentList
+                    }
+                    else
+                    {
+                        logger.Log(LogLevel.Warn, "Could not parse Student gender. Defaulting to Female");
+                        studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().StudentGender = Models.Gender.Female; //default to Female 
+
                     }
                 }
                 TempData.Keep(); // Keep TempData values in a 3rd consecutive request. More info at https://www.tutorialsteacher.com/mvc/tempdata-in-asp.net-mvc

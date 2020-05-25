@@ -1,0 +1,24 @@
+
+2020-05-25 13:59:58.7906|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-05-25 14:00:01.7252|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-05-25 14:00:01.7252|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
+2020-05-25 14:00:01.7401|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-05-25 14:00:01.7401|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-05-25 14:00:18.2201|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-05-25 14:00:18.2251|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-05-25 14:00:18.2251|INFO|WebAppMVC.Controllers.StudentController|Could not find valid student Id. Will default to Id = 1
+2020-05-25 14:00:26.7454|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-05-25 14:00:26.7454|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-05-25 14:00:31.3081|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-05-25 14:00:31.3081|INFO|WebAppMVC.Controllers.StudentController|Could not find valid student Id. Will default to Id = 1
+2020-05-25 14:00:34.4600|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-05-25 14:00:34.4600|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 10
+2020-05-25 14:00:36.1276|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-05-25 14:00:36.1326|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 6
+2020-05-25 14:00:39.5054|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-05-25 14:00:39.5054|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-05-25 14:00:39.5054|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-05-25 14:00:42.5573|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-05-25 14:00:42.5573|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
+2020-05-25 14:00:42.5703|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-05-25 14:00:42.5703|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller

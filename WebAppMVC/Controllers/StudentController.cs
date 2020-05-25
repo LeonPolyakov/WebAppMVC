@@ -6,11 +6,15 @@ using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 using WebAppMVC.Models;
+using NLog;
 
 namespace WebAppMVC.Controllers
-{
+{   
+
     public class StudentController : Controller
     {
+
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         // Mock data using the Student Model       
         IList<Student> studentList = new List<Student>{ // in real life applicatoin, fetch List of student objects from the database
                             new Student() { StudentId = 1, StudentName = "John", Age = 18 , StudentGender = Gender.Male} ,
@@ -27,6 +31,7 @@ namespace WebAppMVC.Controllers
         /// </summary>
         public ActionResult Index() // Index action method  // GET: Student
         {
+            logger.Log(LogLevel.Info, "In Index() method of Student Controller");
             UpdateModelWithTempData(); //apply TempData values to the mock studentList database     
             return View(studentList); // send a linked list of Student data model to the Index view
         }
@@ -40,7 +45,7 @@ namespace WebAppMVC.Controllers
         public ActionResult GetById(int Id = 0)
         {
             // make sure that Id is in the list if student Ids, if not return the 1st Id in the list
-
+            logger.Log(LogLevel.Info, "In Find() Action method of Student Controller");
             var studentId = (from student in studentList
                             where student.StudentId == Id
                             select student.StudentId).ToList();
@@ -58,6 +63,7 @@ namespace WebAppMVC.Controllers
             {
                 // select student from the mock database 
                 var std = studentList.Where(s => s.StudentId == Id).FirstOrDefault(); //select the student from the  mock database who's Id matches the variable in the URI sent to the controller 
+                logger.Log(LogLevel.Info, "Finding Student with ID = " + std.StudentId.ToString());
                 return View(std); // send the Student data model of the selected student to the Find view 
 
             }
@@ -68,6 +74,7 @@ namespace WebAppMVC.Controllers
 
                 // get student from the mock database 
                 var std = studentList.Where(s => s.StudentId == minStudentId).FirstOrDefault(); //select the student from the  mock database whose Id matches the smallest one
+                logger.Log(LogLevel.Info, "Could not find valid student Id. Will default to Id = " + std.StudentId.ToString());
                 return View(std); // send the Student data model of the selected student to the Find view 
             }
             
@@ -79,6 +86,8 @@ namespace WebAppMVC.Controllers
         /// <param name="Id">Student Id</param>
         public ActionResult Edit(int Id=0)  
         {
+
+            logger.Log(LogLevel.Info, "In Edit() Action method of Student Controller");
             // make sure that Id is in the list if student Ids, if not return the 1st Id in the list
             var studentId = (from student in studentList
                              where student.StudentId == Id
@@ -88,6 +97,7 @@ namespace WebAppMVC.Controllers
             {
                 UpdateModelWithTempData();   //    apply TempData values to the mock studentList database 
                 var std = studentList.Where(s => s.StudentId == Id).FirstOrDefault(); //select the student from the  mock database who's Id matches the variable in the URI sent to the controller 
+                logger.Log(LogLevel.Info, "Editing Student with ID = " + std.StudentId.ToString());
                 return View(std); // send the Student data model of the selected student to the Edit view 
 
             }
@@ -98,6 +108,7 @@ namespace WebAppMVC.Controllers
 
                 UpdateModelWithTempData();   //    apply TempData values to the mock studentList database 
                 var std = studentList.Where(s => s.StudentId == minStudentId).FirstOrDefault(); //select the student from the  mock database whose Id matches the smallest one
+                logger.Log(LogLevel.Info, "Could not find valid student Id. Will default to Id = " + std.StudentId.ToString());
                 return View(std); // send the Student data model of the selected student to the Edit view 
             }           
         }
@@ -113,16 +124,21 @@ namespace WebAppMVC.Controllers
         [HttpPost] // the other Edit method must be "HttpGet" because this one is [HttpPost]         
         public ActionResult Edit(Student std) //another possible Edit method signature is  Edit(FormCollection values)
         {
+
+            logger.Log(LogLevel.Info, "In [HttpPost] Edit() Action method of Student Controller");
             //Save the updated Student data in TempData (write code to update student record in the actual database)
-            if (std is null)  
+            if (std is null) 
+            {
+                logger.Log(LogLevel.Error, "Student object is null" + std.StudentId.ToString());
                 throw new ArgumentNullException(nameof(std)); // the std object is null
+            }
             else // std object is not null
             {
                 TempData["StudentId"] = std.StudentId;
                 TempData["StudentName"] = std.StudentName;
                 TempData["age"] = std.Age;
                 TempData["StudentGender"] = std.StudentGender;
-
+                logger.Log(LogLevel.Info, "Edited Student with ID = " + std.StudentId.ToString());
                 return RedirectToAction("Index");
             }        
         }
@@ -140,6 +156,7 @@ namespace WebAppMVC.Controllers
         /// </summary>
         void UpdateModelWithTempData()
         {
+            logger.Log(LogLevel.Info, "In UpdateModelWithTempData() method of Student Controller");
             string sName, sGender, sId, sAge;
 
             if (TempData.ContainsKey("StudentId") && TempData["StudentId"] != null) //if we have a student Id that is not null
@@ -167,6 +184,10 @@ namespace WebAppMVC.Controllers
                     }
                 }
                 TempData.Keep(); // Keep TempData values in a 3rd consecutive request. More info at https://www.tutorialsteacher.com/mvc/tempdata-in-asp.net-mvc
+            }
+            else 
+            {
+                logger.Log(LogLevel.Warn, "TempData Not available" );
             }
             
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,8 @@ namespace WebAppMVC.Controllers
 {
     public class HomeController : Controller
     {
+
+       
         /// <summary>
         /// The Index action mathod of the Home Controller is the default entry point into this MVC application
         /// From here HTTP requests are routed to the various Controllers and Action methods 

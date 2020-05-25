@@ -166,8 +166,9 @@ namespace WebAppMVC.Controllers
                         studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().StudentGender = sGen; //assign TempData student gender to the matching student object in  studentList
                     }
                 }
+                TempData.Keep(); // Keep TempData values in a 3rd consecutive request. More info at https://www.tutorialsteacher.com/mvc/tempdata-in-asp.net-mvc
             }
-            TempData.Keep(); // Keep TempData values in a 3rd consecutive request. More info at https://www.tutorialsteacher.com/mvc/tempdata-in-asp.net-mvc
+            
         }
 
     }

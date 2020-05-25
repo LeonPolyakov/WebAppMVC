@@ -11,9 +11,8 @@ namespace WebAppMVC.Controllers
 {
     public class StudentController : Controller
     {
-
-        // return View(); // Index view
-        IList<Student> studentList = new List<Student>{
+        // Mock data using the Student Model       
+        IList<Student> studentList = new List<Student>{ // in real life applicatoin, fetch List of student objects from the database
                             new Student() { StudentId = 1, StudentName = "John", Age = 18 , StudentGender = Gender.Male} ,
                             new Student() { StudentId = 2, StudentName = "Steve",  Age = 21, StudentGender = Gender.Male } ,
                             new Student() { StudentId = 3, StudentName = "Bill",  Age = 25, StudentGender = Gender.Male } ,
@@ -21,16 +20,22 @@ namespace WebAppMVC.Controllers
                             new Student() { StudentId = 5, StudentName = "Ron" , Age = 31, StudentGender = Gender.Male } ,
                             new Student() { StudentId = 6, StudentName = "Amy" , Age = 18, StudentGender = Gender.Female } ,
                             new Student() { StudentId = 10, StudentName = "Rob" , Age = 19, StudentGender = Gender.Male }
-                             
+
                         };
-
-        // GET: Student
-        public ActionResult Index() // Index action method
+        /// <summary>
+        /// Index (default) action method of the Student controller. This action method returns linked list of Student model objects to the Index view 
+        /// </summary>
+        public ActionResult Index() // Index action method  // GET: Student
         {
-
-            return View(studentList); // Index view
+            UpdateModelWithTempData(); //apply TempData values to the mock studentList database     
+            return View(studentList); // send a linked list of Student data model to the Index view
         }
 
+
+        /// <summary>
+        /// Find action method of the Student controller. This action method returns  Student data model of the selected/default student to the Find view 
+        /// </summary>
+        /// <param name="Id">Student Id with the default = 0</param>
         [ActionName("Find")]
         public ActionResult GetById(int Id = 0)
         {
@@ -41,64 +46,88 @@ namespace WebAppMVC.Controllers
                             select student.StudentId).ToList();
 
 
-            List<SelectListItem> StudentIDs = new List<SelectListItem>(); // create a list of Student IDs
-            studentList.ForEach(i => StudentIDs.Add(new SelectListItem // use the list of student IDs in 
-            {
-                Value = i.StudentId.ToString(),
-                Text = i.StudentId.ToString()
+            List<SelectListItem> StudentIDs = new List<SelectListItem>(); // create a <text,value> pair list of Student IDs
+            studentList.ForEach(i => StudentIDs.Add(new SelectListItem // supply this list of student IDs for use in the matching dropdown list that is in the 'Find' View
+            {               
+                Text = i.StudentId.ToString(),
+                Value = i.StudentId.ToString()
             }));
 
-            ViewBag.List = StudentIDs;
-            if (studentId.Count > 0)
+            ViewBag.List = StudentIDs; // use ViewBag to supply the list of student Ids to be used in the dropdown list in 'Find' View
+            if (studentId.Count > 0) // make sure that we have a studentId to work with
             {
-                // get student from the database 
-                var std = studentList.Where(s => s.StudentId == Id).FirstOrDefault();
-                return View(std);
+                // select student from the mock database 
+                var std = studentList.Where(s => s.StudentId == Id).FirstOrDefault(); //select the student from the  mock database who's Id matches the variable in the URI sent to the controller 
+                return View(std); // send the Student data model of the selected student to the Find view 
 
             }
-            else {
+            else { // could not find a valid student Id so will default to the 1st one in the list
 
-                int minStudentId = (from student in studentList                                
+                int minStudentId = (from student in studentList      // select the 1st student Id from the list of student Ids                          
                                  select student.StudentId).ToArray().Min();
 
-                // get student from the database 
-                var std = studentList.Where(s => s.StudentId == minStudentId).FirstOrDefault();
-                return View(std);
-
+                // get student from the mock database 
+                var std = studentList.Where(s => s.StudentId == minStudentId).FirstOrDefault(); //select the student from the  mock database whose Id matches the smallest one
+                return View(std); // send the Student data model of the selected student to the Find view 
             }
             
         }
-        
-        public ActionResult Edit(int Id)  //This is  Edit action method that is paired with the 'Edit' view. This method sends the std model to the Edit view
-        {
-            //Get the student from studentList sample collection for demo purpose.
-            //Get the student from the database in the real application
-            var std = studentList.Where(s => s.StudentId == Id).FirstOrDefault();
 
-            return View(std);
+        /// <summary>
+        /// Edit action method of the Student controller. This action method sends Student data model of the selected/default student to the Edit view 
+        /// </summary>
+        /// <param name="Id">Student Id</param>
+        public ActionResult Edit(int Id=0)  
+        {
+            // make sure that Id is in the list if student Ids, if not return the 1st Id in the list
+            var studentId = (from student in studentList
+                             where student.StudentId == Id
+                             select student.StudentId).ToList();
+
+            if (studentId.Count > 0) // make sure that we have a studentId to work with
+            {
+                UpdateModelWithTempData();   //    apply TempData values to the mock studentList database 
+                var std = studentList.Where(s => s.StudentId == Id).FirstOrDefault(); //select the student from the  mock database who's Id matches the variable in the URI sent to the controller 
+                return View(std); // send the Student data model of the selected student to the Edit view 
+
+            }
+            else // could not find a valid student Id so will default to the 1st one in the list
+            { 
+                int minStudentId = (from student in studentList      // select the 1st student Id from the list of student Ids                          
+                                    select student.StudentId).ToArray().Min();
+
+                UpdateModelWithTempData();   //    apply TempData values to the mock studentList database 
+                var std = studentList.Where(s => s.StudentId == minStudentId).FirstOrDefault(); //select the student from the  mock database whose Id matches the smallest one
+                return View(std); // send the Student data model of the selected student to the Edit view 
+            }           
         }
 
-        [HttpPost] // the other Edit mthod must be "HttpGet" because this one is HttpPost. 
-        public ActionResult Edit([Bind(Exclude = "Age")]Student std)
+
+        /// <summary>
+        /// Edit action method of the Student Controller. 
+        /// 1.This action method recieves Student data model of an edited student from the 'Edit' view 
+        /// 2.Then save the updated student data in TempData to be used in the Index view
+        /// </summary>
+        /// public ActionResult Edit([Bind(Exclude = "Age")]Student std) (a possible Edit method signature)
+        /// <param name="std">Student model object holding the data of the edited student</param>
+        [HttpPost] // the other Edit method must be "HttpGet" because this one is [HttpPost]         
+        public ActionResult Edit(Student std) //another possible Edit method signature is  Edit(FormCollection values)
         {
-            //write code to update student 
-            var Id = std.StudentId;
-            var name = std.StudentName;
-            var age = std.Age;
-            return RedirectToAction("Index");
+            //Save the updated Student data in TempData (write code to update student record in the actual database)
+            if (std is null)  
+                throw new ArgumentNullException(nameof(std)); // the std object is null
+            else // std object is not null
+            {
+                TempData["StudentId"] = std.StudentId;
+                TempData["StudentName"] = std.StudentName;
+                TempData["age"] = std.Age;
+                TempData["StudentGender"] = std.StudentGender;
+
+                return RedirectToAction("Index");
+            }        
         }
 
-
-        //[HttpPost]
-        //public ActionResult Edit(FormCollection values)
-        //{
-        //    //write code to update student 
-        //    var name = values["StudentName"];
-        //    var age = values["Age"];
-        //    return RedirectToAction("Index");
-        //}
-
-
+       
         public ActionResult Delete(int Id)
         {
             // delete student from the database whose id matches with specified id
@@ -106,11 +135,39 @@ namespace WebAppMVC.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Details(int Id)
+        /// <summary>
+        /// This method applies the data saved to TempData in [HttpPost] Edit to the a linked list noode in studentList that mataches the student Id that was edited in Edit view 
+        /// </summary>
+        void UpdateModelWithTempData()
         {
-            // delete student from the database whose id matches with specified id
+            string sName, sGender, sId, sAge;
 
-            return RedirectToAction("Index");
+            if (TempData.ContainsKey("StudentId") && TempData["StudentId"] != null) //if we have a student Id that is not null
+            {
+                sId = TempData["StudentId"].ToString(); // extract student Id from TempData
+                if (TempData.ContainsKey("StudentName") && (TempData["StudentName"] != null)) //if we have a student name that is not null
+                {
+                    sName = TempData["StudentName"].ToString(); // extract student Name from TempData
+                    studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().StudentName = sName; //assign TempData studentName to the matching student object in  studentList
+                }
+
+                if (TempData.ContainsKey("Age") && (TempData["Age"] != null))
+                {
+                    sAge = TempData["Age"].ToString(); // extract student Age from TempData
+                    studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().Age = Int32.Parse(sAge); //assign TempData student age to the matching student object in  studentList
+                }
+
+                if (TempData.ContainsKey("StudentGender") && (TempData["StudentGender"] != null))
+                {
+                    Gender sGen;
+                    sGender = TempData["StudentGender"].ToString(); // extract student gender from TempData
+                    if (Enum.TryParse(sGender, out sGen)) // convert gender from string to Enum value for later assignemnet to student object
+                    {
+                        studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().StudentGender = sGen; //assign TempData student gender to the matching student object in  studentList
+                    }
+                }
+            }
+            TempData.Keep(); // Keep TempData values in a 3rd consecutive request. More info at https://www.tutorialsteacher.com/mvc/tempdata-in-asp.net-mvc
         }
 
     }

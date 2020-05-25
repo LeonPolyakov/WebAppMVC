@@ -170,6 +170,7 @@
     <Content Include="Views\Grade\Index.cshtml" />
     <Content Include="Views\Student\Find.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
+    <Content Include="Views\Shared\_HeaderNavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

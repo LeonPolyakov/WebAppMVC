@@ -12,7 +12,7 @@ namespace WebAppMVC.Models
         [Display(Name = "Student Id")]
         public int StudentId { get; set; }
         
-        [Required]
+        [Required][StringLength(30)]
         [Display(Name = "Name")]
         public string StudentName { get; set; }
 

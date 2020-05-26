@@ -16,9 +16,10 @@
         </dt>
 
         <dd>
-            <!--  @Html.DropDownListFor(model => model.StudentId, new SelectList(ViewBag.List, "Value", "Text")) -->
+            @* This dropdown list Html helper consumes the linked list of StudentIds placed in ViewBag in the Find() action method of the Student Controller  *@
+            @* It has an onchange attribute that redirects  to Student controller / Find action method with a parameter of the value of the selected dropdown box index    *@
             @Html.DropDownListFor(model => model.StudentId, new SelectList(ViewBag.List, "Value", "Text"), new { @class = "form-control", @style = "width:65px", onchange = "document.location.href = '/Student/find?Id=' + this.options[this.selectedIndex].value;" })
-            
+
         </dd>
 
         <dt>

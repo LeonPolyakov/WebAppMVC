@@ -134,13 +134,22 @@ namespace WebAppMVC.Controllers
             }
             else // std object is not null
             {
-                TempData["StudentId"] = std.StudentId;
-                TempData["StudentName"] = std.StudentName;
-                TempData["age"] = std.Age;
-                TempData["StudentGender"] = std.StudentGender;
-                logger.Log(LogLevel.Info, "Edited Student with ID = " + std.StudentId.ToString());
-                logger.Log(LogLevel.Info, "Added to TempData Student object " + std.StudentId.ToString());
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)//  If ModelState is valid then update the student 
+                {
+                    logger.Log(LogLevel.Info, "ModelState is valid. Updating student info");
+                    TempData["StudentId"] = std.StudentId;
+                    TempData["StudentName"] = std.StudentName;
+                    TempData["age"] = std.Age;
+                    TempData["StudentGender"] = std.StudentGender;
+                    logger.Log(LogLevel.Info, "Edited Student with ID = " + std.StudentId.ToString());
+                    logger.Log(LogLevel.Info, "Added to TempData Student object " + std.StudentId.ToString());
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    logger.Log(LogLevel.Error, "ModelState is NOT valid. student info NOT updated");
+                    return View(std); //if not then return Edit without changes
+                }
             }        
         }
 

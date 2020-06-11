@@ -13,10 +13,13 @@
             <table class="table">
                 <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.StudentName)
+                        @Html.DisplayNameFor(model => model.StudentFName)
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Age)
+                        @Html.DisplayNameFor(model => model.StudentLname)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.StudentAge)
                     </th>
                     <th>
                         @Html.DisplayNameFor(model => model.StudentId)
@@ -32,10 +35,13 @@
             @foreach (var item in Model) {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.StudentName)
+                    @Html.DisplayFor(modelItem => item.StudentFName)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Age)
+                    @Html.DisplayFor(modelItem => item.StudentLname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentAge)
                 </td>
 
                 <td>
@@ -50,8 +56,8 @@
                     @Html.ActionLink("Edit", "Edit", new { id = item.StudentId }) |
                     @Html.ActionLink("Find", "Find", new { id = item.StudentId }) |
                     @*  @Html.ActionLink("Delete", "Delete", new { id = item.StudentId }) *@
-    </td>
-    </tr>
+                </td>
+            </tr>
     }
 
     </table>

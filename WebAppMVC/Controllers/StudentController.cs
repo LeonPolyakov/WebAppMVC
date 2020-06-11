@@ -1,41 +1,36 @@
-﻿using Microsoft.Ajax.Utilities;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography;
-using System.Web;
 using System.Web.Mvc;
 using WebAppMVC.Models;
 using NLog;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using System.Net.Http;
+using System.Web.Script.Serialization;
+using Newtonsoft.Json.Linq;
+using System.Collections;
+using System.Threading.Tasks;
+using System.Text;
 
 namespace WebAppMVC.Controllers
-{   
+{
 
     public class StudentController : Controller
     {
-
+               
+        static HttpClient client = new HttpClient();
         private static Logger logger = LogManager.GetCurrentClassLogger();
-        // Mock data using the Student Model       
-        IList<Student> studentList = new List<Student>{ // in real life applicatoin, fetch List of student objects from the database
-                            new Student() { StudentId = 1, StudentName = "John", Age = 18 , StudentGender = Gender.Male} ,
-                            new Student() { StudentId = 2, StudentName = "Steve",  Age = 21, StudentGender = Gender.Male } ,
-                            new Student() { StudentId = 3, StudentName = "Bill",  Age = 25, StudentGender = Gender.Male } ,
-                            new Student() { StudentId = 4, StudentName = "Ram" , Age = 20, StudentGender = Gender.Male } ,
-                            new Student() { StudentId = 5, StudentName = "Ron" , Age = 31, StudentGender = Gender.Male } ,
-                            new Student() { StudentId = 6, StudentName = "Amy" , Age = 18, StudentGender = Gender.Female } ,
-                            new Student() { StudentId = 10, StudentName = "Rob" , Age = 19, StudentGender = Gender.Male }
-
-                        };
+        private static List<Student> studentList = new List<Student>();
+        bool getStudentData = retrieveStudentInfo();
         /// <summary>
         /// Index (default) action method of the Student controller. This action method returns linked list of Student model objects to the Index view 
         /// </summary>
         public ActionResult Index() // Index action method  // GET: Student
-        {
-            logger.Log(LogLevel.Info, "In Index() method of Student Controller");
+        {           
             UpdateModelWithTempData(); //apply TempData values to the mock studentList database     
             return View(studentList); // send a linked list of Student data model to the Index view
-        }
-
+        }       
 
         /// <summary>
         /// Find action method of the Student controller. This action method returns  Student data model of the selected/default student to the Find view 
@@ -96,7 +91,7 @@ namespace WebAppMVC.Controllers
             if (studentId.Count > 0) // make sure that we have a studentId to work with
             {
                 UpdateModelWithTempData();   //    apply TempData values to the mock studentList database 
-                var std = studentList.Where(s => s.StudentId == Id).FirstOrDefault(); //select the student from the  mock database who's Id matches the variable in the URI sent to the controller 
+                var std = studentList.Where(s => s.StudentId == Id).FirstOrDefault(); //select the student from the  database who's Id matches the variable in the URI sent to the controller 
                 logger.Log(LogLevel.Info, "Editing Student with ID = " + std.StudentId.ToString());
                 return View(std); // send the Student data model of the selected student to the Edit view 
 
@@ -133,23 +128,21 @@ namespace WebAppMVC.Controllers
                 throw new ArgumentNullException(nameof(std)); // the std object is null
             }
             else // std object is not null
-            {
-                if (ModelState.IsValid)//  If ModelState is valid then update the student 
-                {
-                    logger.Log(LogLevel.Info, "ModelState is valid. Updating student info");
+            {               
+                    logger.Log(LogLevel.Info, "Updating student info");
                     TempData["StudentId"] = std.StudentId;
-                    TempData["StudentName"] = std.StudentName;
-                    TempData["age"] = std.Age;
+                    TempData["StudentFName"] = std.StudentFName;
+                    TempData["StudentLname"] = std.StudentLname;
+                    TempData["StudentAge"] = std.StudentAge;
                     TempData["StudentGender"] = std.StudentGender;
                     logger.Log(LogLevel.Info, "Edited Student with ID = " + std.StudentId.ToString());
                     logger.Log(LogLevel.Info, "Added to TempData Student object " + std.StudentId.ToString());
-                    return RedirectToAction("Index");
-                }
-                else
-                {
-                    logger.Log(LogLevel.Error, "ModelState is NOT valid. student info NOT updated");
-                    return View(std); //if not then return Edit without changes
-                }
+                    bool success = saveStudentInfo(std);
+                    if (success == true)
+                            logger.Log(LogLevel.Info, "Successfully saved student info for student" + std.StudentId.ToString());
+                    else
+                            logger.Log(LogLevel.Error, "Failed to save student info for student" + std.StudentId.ToString());
+                    return RedirectToAction("Index");              
             }        
         }
 
@@ -174,14 +167,14 @@ namespace WebAppMVC.Controllers
                 sId = TempData["StudentId"].ToString(); // extract student Id from TempData
                 if (TempData.ContainsKey("StudentName") && (TempData["StudentName"] != null)) //if we have a student name that is not null
                 {
-                    sName = TempData["StudentName"].ToString(); // extract student Name from TempData
-                    studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().StudentName = sName; //assign TempData studentName to the matching student object in  studentList
+                    sName = TempData["StudentFName"].ToString(); // extract student Name from TempData
+                    studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().StudentFName = sName; //assign TempData studentName to the matching student object in  studentList
                 }
 
-                if (TempData.ContainsKey("Age") && (TempData["Age"] != null))
+                if (TempData.ContainsKey("StudentAge") && (TempData["StudentAge"] != null))
                 {
-                    sAge = TempData["Age"].ToString(); // extract student Age from TempData
-                    studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().Age = Int32.Parse(sAge); //assign TempData student age to the matching student object in  studentList
+                    sAge = TempData["StudentAge"].ToString(); // extract student Age from TempData
+                    studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().StudentAge = Int32.Parse(sAge); //assign TempData student age to the matching student object in  studentList
                 }
 
                 if (TempData.ContainsKey("StudentGender") && (TempData["StudentGender"] != null))
@@ -208,6 +201,135 @@ namespace WebAppMVC.Controllers
             }
             
         }
+
+        private static bool saveStudentInfo(Student std)
+        {
+            bool success = false;
+            logger.Log(LogLevel.Info, "In saveStudentInfo method" + std.StudentId.ToString());
+            if (std is null) {                
+                logger.Log(LogLevel.Error, "Student object is null" + std.StudentId.ToString());
+                throw new ArgumentNullException(nameof(std)); // the std object is null
+            }
+            else
+            {
+                try
+                {
+                    logger.Log(LogLevel.Info, "Saving Student info to a DynamoDB table" + std.StudentId.ToString());
+
+                    PostStudent student = new PostStudent();
+                    student.StudentFName = std.StudentFName;
+                    student.StudentLname = std.StudentLname;
+                    student.StudentAge = std.StudentAge.ToString();
+                    student.StudentGender = std.StudentGender.ToString();
+
+                    Uri u = new Uri("https://zz4k4joszj.execute-api.us-west-2.amazonaws.com/prod/students/" + std.StudentId.ToString());
+                    var payload = JsonConvert.SerializeObject(student);
+
+                    HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
+                    var t = Task.Run(() => PostURI(u, c));
+                    t.Wait();
+                    var result = t.Result;
+                    if (result == "OK")
+                    {
+                        success = true;
+                    }
+                    
+                }
+                catch(Exception ex) {
+                    logger.Log(LogLevel.Error, "Error saving student info to DynamoDB" + ex.ToString());
+
+                }
+            }
+            return success;
+
+        }
+
+        static async Task<string> PostURI(Uri u, HttpContent c)
+        {
+            var response = string.Empty;
+            using (var client = new HttpClient())
+            {
+                HttpResponseMessage result = await client.PostAsync(u, c);
+                if (result.IsSuccessStatusCode)
+                {
+                    response = result.StatusCode.ToString();
+                }
+            }
+            return response;
+        }
+
+        private static bool retrieveStudentInfo() 
+        {
+            bool succeeded = false;
+            logger.Log(LogLevel.Info, "In retrieveStudentInfo()  method of Student Controller");
+            if (studentList.Count < 1)
+            {
+                string url = string.Format("https://zz4k4joszj.execute-api.us-west-2.amazonaws.com/prod/students");
+                HttpClient client = new HttpClient();
+                client.DefaultRequestHeaders.Add("Accept", "application/json");
+                try
+                {
+                    var jsonString = client.GetStringAsync(url).Result; // retrieve the contents of the Dynamo database Students table as a json string
+                    JObject o = JObject.Parse(jsonString); // covert json string to object
+                    JArray ItemsArray = (JArray)o["Items"]; // parse out the Items array that holds the array of Students
+
+                    foreach (JObject studentArrayItem in ItemsArray.Children<JObject>()) // for each Student in the Items array
+                    {
+                        Student studentObj = new Student(); // create a new Student object 
+                        foreach (JProperty p in studentArrayItem.Properties()) // for each Student retrieve Student info and hydrate the Student object
+                        {
+                            var name = p.Name.ToString();
+                            var value = p.Value.ToString();
+                            switch (name)
+                            {
+                                case "StudentID":
+                                    studentObj.StudentId = Int32.Parse(value);
+                                    break;
+                                case "StudentFName":
+                                    studentObj.StudentFName = value;
+                                    break;
+                                case "StudentLname":
+                                    studentObj.StudentLname = value;
+                                    break;
+                                case "StudentAge":
+                                    studentObj.StudentAge = Int32.Parse(value);
+                                    break;
+                                case "StudentGender":
+                                    studentObj.StudentGender = (Gender)Enum.Parse(typeof(Gender), value);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                        studentList.Add(studentObj); // add the Student object to the studentList linked list
+                    }
+                    succeeded = true;
+                }
+                catch
+                {
+                    logger.Log(LogLevel.Error, "Unable to retrieve or parse Student info Json from AWS DynamoDB");
+                }
+            }
+            else {
+                succeeded = true;
+            }
+
+            return succeeded;
+        }
+       
+    }
+
+    /// <summary>
+    /// This is a helper class that maps the Student view class to the DynamoDB table data structure 
+    /// An objet of this class will be serilaized and used as  content for the student/{studentid} API endpoint 
+    /// </summary>
+    public class PostStudent
+    {
+                   
+        public string StudentFName { get; set; }
+        public string StudentLname { get; set; }       
+        public string StudentAge { get; set; }
+        public string StudentGender { get; set; }
 
     }
 }

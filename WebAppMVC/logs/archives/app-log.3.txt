@@ -1,0 +1,10 @@
+2020-06-02 10:30:19.2518|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-02 10:30:19.3077|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-02 10:30:23.8030|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-02 10:30:23.8030|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-02 10:30:37.0541|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-02 10:30:37.0791|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-02 10:52:23.0262|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-02 10:52:23.0502|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-02 10:52:46.2044|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-02 10:52:46.2333|WARN|WebAppMVC.Controllers.StudentController|TempData Not available

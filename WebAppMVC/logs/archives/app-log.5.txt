@@ -1,0 +1,3 @@
+2020-05-27 09:53:47.1346|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-05-27 09:53:47.1794|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-05-27 09:53:47.1844|WARN|WebAppMVC.Controllers.StudentController|TempData Not available

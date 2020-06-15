@@ -1,210 +1,335 @@
-2020-05-26 07:33:33.8465|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:33:33.8824|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:33:33.8824|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:33:37.6401|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 07:33:37.6401|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:33:37.6477|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:33:37.6477|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 07:33:41.0755|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-05-26 07:33:41.0755|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
-2020-05-26 07:33:41.0755|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
-2020-05-26 07:33:41.0934|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:33:41.0934|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:33:41.1014|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
-2020-05-26 07:33:43.0760|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
-2020-05-26 07:33:43.0760|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 6
-2020-05-26 07:33:46.4253|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 07:33:46.4293|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:33:46.4293|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
-2020-05-26 07:33:46.4293|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 07:33:49.1163|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-05-26 07:33:49.1163|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
-2020-05-26 07:33:49.1163|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
-2020-05-26 07:33:49.1332|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:33:49.1332|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:33:49.1332|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
-2020-05-26 07:35:41.1218|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:35:41.1477|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:35:41.1477|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:35:55.7221|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 07:35:55.7270|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:35:55.7270|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:35:55.7270|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 1
-2020-05-26 07:35:57.5933|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:35:57.5933|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:35:57.6013|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:37:32.5346|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:37:32.5605|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:37:32.5605|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:37:38.1874|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:37:38.1874|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:37:38.1953|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:37:40.6893|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:37:40.6943|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:37:40.6943|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:37:42.2244|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 07:37:42.2244|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:37:42.2244|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:37:42.2244|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 1
-2020-05-26 07:37:44.2413|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:37:44.2413|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:37:44.2413|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:37:45.2285|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
-2020-05-26 07:37:45.2285|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 1
-2020-05-26 07:37:47.2781|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
-2020-05-26 07:37:47.2781|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 10
-2020-05-26 07:37:50.5644|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
-2020-05-26 07:37:50.5684|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 6
-2020-05-26 07:37:55.8493|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:37:55.8493|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:37:55.8493|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:48:01.0353|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
-2020-05-26 07:48:01.0732|WARN|WebAppMVC.Controllers.StudentController|Could not find valid student Id. Will default to Id = 1
-2020-05-26 07:48:05.4996|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
-2020-05-26 07:48:05.5055|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 2
-2020-05-26 07:48:10.7808|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
-2020-05-26 07:48:10.7808|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 4
-2020-05-26 07:48:15.0905|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:48:15.0905|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:48:15.0995|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:48:22.8617|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 07:48:22.8657|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:48:22.8657|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:48:22.8657|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 07:48:28.4406|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:48:28.4470|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:48:28.4470|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:48:29.8023|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
-2020-05-26 07:48:29.8023|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 6
-2020-05-26 07:48:32.5755|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
-2020-05-26 07:48:32.5755|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 10
-2020-05-26 07:48:34.3577|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
-2020-05-26 07:48:34.3577|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 1
-2020-05-26 07:55:27.8463|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:55:27.8722|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:55:27.8722|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:55:29.8676|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:55:29.8676|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:55:29.8676|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:55:35.0735|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:55:35.0735|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:55:35.0854|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:56:58.0817|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:56:58.1096|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:56:58.1156|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:57:00.0906|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 07:57:00.0906|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:57:00.1004|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 07:57:00.1004|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 1
-2020-05-26 07:57:04.1912|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-05-26 07:57:04.1962|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 1
-2020-05-26 07:57:04.1962|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 1
-2020-05-26 07:57:04.2122|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 07:57:04.2122|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 07:57:04.2122|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
-2020-05-26 08:02:19.7529|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:02:19.7778|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:02:19.7778|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:02:23.9478|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 08:02:23.9478|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:02:23.9577|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:02:23.9577|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 08:02:44.6355|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-05-26 08:02:44.6355|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
-2020-05-26 08:02:44.6454|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
-2020-05-26 08:02:44.6454|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:02:44.6454|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:02:44.6664|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
-2020-05-26 08:02:50.8335|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 08:02:50.8335|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:02:50.8335|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
-2020-05-26 08:02:50.8495|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 08:03:59.7296|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:03:59.7546|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:03:59.7546|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:04:01.2487|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 08:04:01.2547|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:04:01.2547|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:04:01.2547|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 08:04:16.1700|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:04:16.1700|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:04:16.1800|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:07:38.7017|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:07:38.7296|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:07:38.7296|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:07:41.0675|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 08:07:41.0675|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:07:41.0675|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:07:41.0675|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 08:07:46.9610|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:07:46.9610|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:07:46.9610|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:07:50.3628|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 08:07:50.3689|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:07:50.3689|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:07:50.3689|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 08:08:06.2105|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:08:06.2105|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:08:06.2105|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:08:08.0180|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 08:08:08.0230|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:08:08.0230|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:08:08.0230|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 08:08:21.8177|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:08:21.8177|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:08:21.8177|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:08:30.8260|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 08:08:30.8260|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:08:30.8370|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:08:30.8370|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 08:08:34.6923|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-05-26 08:08:59.5192|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-05-26 08:13:05.1739|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:13:05.2008|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:13:05.2008|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:13:07.3894|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 08:13:07.3954|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:13:07.3954|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:13:07.3954|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 08:13:13.8750|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-05-26 08:13:13.8799|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
-2020-05-26 08:13:13.8799|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
-2020-05-26 08:13:13.8799|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
-2020-05-26 08:13:13.8989|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:13:13.8989|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:13:13.8989|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
-2020-05-26 08:13:17.1144|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 08:13:17.1144|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:13:17.1144|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
-2020-05-26 08:13:17.1144|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 08:13:20.5670|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-05-26 08:13:20.5710|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
-2020-05-26 08:13:20.5710|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
-2020-05-26 08:13:20.5710|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
-2020-05-26 08:13:20.5879|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:13:20.5879|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:13:20.5879|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
-2020-05-26 08:13:26.5455|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:13:26.5455|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:13:26.5555|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
-2020-05-26 08:13:33.0095|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:13:33.0095|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:13:33.0095|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
-2020-05-26 08:33:46.5522|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:33:46.5782|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:33:46.5842|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:33:48.9157|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 08:33:48.9157|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:33:48.9157|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-05-26 08:33:48.9313|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
-2020-05-26 08:33:58.2133|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-05-26 08:33:58.2133|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
-2020-05-26 08:33:58.2133|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
-2020-05-26 08:33:58.2272|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
-2020-05-26 08:33:58.2272|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-05-26 08:33:58.2422|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:33:58.2422|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
-2020-05-26 08:34:00.5312|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-05-26 08:34:00.5312|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-05-26 08:34:00.5402|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
-2020-05-26 08:34:00.5402|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 08:07:40.4026|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 08:07:40.4874|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 08:07:40.4874|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 08:10:01.1427|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 08:10:01.2075|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 08:10:01.2075|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 08:27:09.1948|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 08:27:10.6456|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 08:27:10.6626|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 08:27:16.1407|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 08:27:16.1457|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 08:27:16.1457|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 08:27:16.1457|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 08:27:18.9756|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 08:27:18.9756|ERROR|WebAppMVC.Controllers.StudentController|ModelState is NOT valid. student info NOT updated
+2020-06-03 08:27:21.7602|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 08:27:21.7602|ERROR|WebAppMVC.Controllers.StudentController|ModelState is NOT valid. student info NOT updated
+2020-06-03 08:27:23.4235|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 08:27:23.4235|ERROR|WebAppMVC.Controllers.StudentController|ModelState is NOT valid. student info NOT updated
+2020-06-03 08:27:24.6725|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 08:27:24.6765|ERROR|WebAppMVC.Controllers.StudentController|ModelState is NOT valid. student info NOT updated
+2020-06-03 08:27:32.0747|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 08:27:32.6235|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 08:27:32.6394|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:08:40.4809|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:08:41.9297|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:08:41.9506|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:08:45.5318|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:08:45.8712|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:08:45.8771|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:08:45.8771|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:08:45.8771|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 09:08:49.5689|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:08:50.1542|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:08:50.1622|ERROR|WebAppMVC.Controllers.StudentController|ModelState is NOT valid. student info NOT updated
+2020-06-03 09:08:52.7546|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:08:53.0239|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:08:53.0408|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:33:56.7887|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:33:58.1809|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:33:58.1809|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:37:45.5227|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:37:46.1418|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:37:46.1418|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:37:49.5974|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:37:49.6204|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:37:49.6264|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:37:49.6264|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:37:49.6264|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 7
+2020-06-03 09:37:51.3486|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:37:51.3486|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:37:51.3486|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:37:53.8452|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:37:53.8452|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:37:53.8452|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:37:53.8602|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:37:53.8602|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 1
+2020-06-03 09:37:57.6413|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:37:57.6613|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:37:57.6613|ERROR|WebAppMVC.Controllers.StudentController|ModelState is NOT valid. student info NOT updated
+2020-06-03 09:37:58.7086|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:37:58.7086|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:37:58.7086|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:38:07.1574|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:07.1574|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:38:07.1574|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:38:07.1733|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:38:07.1733|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 09:38:09.4964|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:09.5014|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:38:09.5014|ERROR|WebAppMVC.Controllers.StudentController|ModelState is NOT valid. student info NOT updated
+2020-06-03 09:38:13.6272|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:13.6272|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:38:13.6272|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:38:18.8767|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:18.8767|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:38:18.8767|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:38:20.5109|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:20.5109|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 09:38:20.5229|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 7
+2020-06-03 09:38:27.1544|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:27.1583|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 09:38:27.1583|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 3
+2020-06-03 09:38:30.0100|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:30.0100|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 09:38:30.0200|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 1
+2020-06-03 09:38:32.0396|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:32.0396|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 09:38:32.0526|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 2
+2020-06-03 09:38:34.1140|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:34.1140|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 09:38:34.1140|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 3
+2020-06-03 09:38:36.0477|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:36.0477|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 09:38:36.0477|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 6
+2020-06-03 09:38:38.0972|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:38.0972|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 09:38:38.0972|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 5
+2020-06-03 09:38:40.6335|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:40.6335|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 09:38:40.6445|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 2
+2020-06-03 09:38:42.8636|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:42.8636|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 09:38:42.8636|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 4
+2020-06-03 09:38:45.0807|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:45.0807|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 09:38:45.0807|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 7
+2020-06-03 09:38:46.7860|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:46.7860|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 09:38:46.7860|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 6
+2020-06-03 09:38:49.0115|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:38:49.0115|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:38:49.0204|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:47:37.2332|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:47:40.1748|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:47:40.1988|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:47:40.2058|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:47:40.2058|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:47:40.2058|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 09:47:44.0595|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:47:44.0794|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:47:44.0794|ERROR|WebAppMVC.Controllers.StudentController|ModelState is NOT valid. student info NOT updated
+2020-06-03 09:47:50.3409|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:51:19.5550|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:51:19.8898|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:51:19.9027|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:51:22.4303|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:51:22.4572|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:51:22.4572|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:51:22.4572|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:51:22.4711|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 09:51:25.5696|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:51:31.5767|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:57:27.7242|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:57:28.0675|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:57:28.0884|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:57:30.7494|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:57:30.7734|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:57:30.7734|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:57:30.7834|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 09:57:30.7834|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 09:57:33.9707|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:57:37.1758|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:57:38.9322|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 09:57:41.1253|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
+2020-06-03 09:57:41.6196|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
+2020-06-03 09:57:43.0294|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:57:43.0334|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:57:43.0334|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
+2020-06-03 09:57:47.8763|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:57:47.8763|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:57:47.8763|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:57:47.8763|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
+2020-06-03 09:57:47.8962|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 09:57:55.8916|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:57:59.1712|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:57:59.1771|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 09:57:59.1771|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
+2020-06-03 09:57:59.1771|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
+2020-06-03 09:57:59.1931|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:57:59.1931|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:57:59.1931|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 09:58:02.9331|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:02.9411|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:58:02.9411|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:58:02.9411|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 09:58:02.9541|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 09:58:04.9773|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:04.9773|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:58:04.9862|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 09:58:04.9862|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
+2020-06-03 09:58:04.9862|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
+2020-06-03 09:58:05.0012|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:05.0012|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:58:05.0012|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
+2020-06-03 09:58:08.4124|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:08.4124|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:58:08.4124|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:58:08.4263|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
+2020-06-03 09:58:08.4263|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 7
+2020-06-03 09:58:10.5457|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:10.5506|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:58:10.5506|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 09:58:10.5506|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 7
+2020-06-03 09:58:10.5646|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 7
+2020-06-03 09:58:10.5646|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:10.5646|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:58:10.5806|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 09:58:17.5645|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:17.5645|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:58:17.5645|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:58:17.5795|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 09:58:17.5795|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 7
+2020-06-03 09:58:20.0094|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:20.0094|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:58:20.0213|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 09:58:20.0213|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 7
+2020-06-03 09:58:20.0213|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 7
+2020-06-03 09:58:20.0363|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:20.0363|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:58:20.0363|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
+2020-06-03 09:58:24.5170|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:24.5170|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:58:24.5170|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:58:24.5329|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
+2020-06-03 09:58:24.5329|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 09:58:31.3611|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:31.3611|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:58:31.3611|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 09:58:31.3800|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
+2020-06-03 09:58:31.3800|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
+2020-06-03 09:58:31.3920|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:31.3920|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:58:31.3920|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 09:58:43.5092|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:43.5092|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:58:43.5222|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:58:43.5222|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 09:58:43.5222|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 09:58:50.9531|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:50.9581|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:58:50.9581|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 09:58:50.9581|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
+2020-06-03 09:58:50.9721|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
+2020-06-03 09:58:50.9721|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:58:50.9850|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:58:50.9850|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 09:59:08.9979|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:59:09.0029|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 09:59:09.0029|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 09:59:09.0029|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 09:59:09.0169|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 09:59:16.2818|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 09:59:16.2868|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 09:59:16.2868|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 09:59:43.8787|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
+2020-06-03 09:59:44.5070|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
+2020-06-03 09:59:55.3996|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 10:00:32.8560|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 10:00:32.8660|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
+2020-06-03 10:00:47.2533|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 10:00:47.2533|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 10:00:47.2533|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 10:00:47.2683|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
+2020-06-03 10:00:47.2683|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 10:00:52.3495|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 10:00:52.3495|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 10:00:52.3495|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 10:01:21.2503|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
+2020-06-03 10:01:21.2553|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
+2020-06-03 10:01:21.2553|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 10:01:25.6501|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 10:01:25.6501|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 10:01:35.9652|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 10:01:35.9722|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 10:01:35.9722|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 6
+2020-06-03 10:01:38.6525|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 10:01:38.6575|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 10:01:38.6575|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 2
+2020-06-03 10:01:41.0343|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 10:01:41.0343|INFO|WebAppMVC.Controllers.StudentController|In Find() Action method of Student Controller
+2020-06-03 10:01:41.0343|INFO|WebAppMVC.Controllers.StudentController|Finding Student with ID = 5
+2020-06-03 10:01:42.4526|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 10:01:42.4566|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 10:01:42.4566|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 10:01:42.4566|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 10:01:42.4696|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 5
+2020-06-03 10:01:46.3228|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 10:01:46.3228|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 10:01:46.3328|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 10:01:47.8828|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 5
+2020-06-03 10:01:47.8828|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 5
+2020-06-03 10:01:47.8952|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 10:01:49.1797|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 10:01:49.1797|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 12:05:33.7340|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:05:39.7024|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 12:05:39.7074|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 12:05:44.8157|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:05:44.8436|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 12:05:44.8496|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 12:05:44.8496|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 12:05:44.8496|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 12:05:50.2373|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:05:50.2612|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 12:05:50.2612|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 12:05:50.2702|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
+2020-06-03 12:05:50.2702|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
+2020-06-03 12:05:50.2861|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:05:51.9253|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 12:05:51.9253|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 12:11:18.8194|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:11:22.2869|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 12:11:22.2869|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 12:11:26.2249|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:11:26.2488|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 12:11:26.2538|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 12:11:26.2538|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 12:11:26.2538|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 12:11:40.3971|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:11:40.4200|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 12:11:40.4250|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 12:11:40.4250|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
+2020-06-03 12:11:40.4250|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
+2020-06-03 12:13:14.6778|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:13:38.6527|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 12:21:40.0916|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:21:44.7989|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 12:21:44.7989|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 12:21:48.1776|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:21:48.2015|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 12:21:48.2075|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 12:21:48.2075|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-03 12:21:48.2075|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 6
+2020-06-03 12:21:53.0298|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:21:53.0508|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 12:21:53.0508|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 12:21:53.0508|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 6
+2020-06-03 12:21:53.0638|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 6
+2020-06-03 12:21:57.9580|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:21:57.9580|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 12:21:57.9580|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 12:22:41.1781|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:22:41.1781|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-03 12:22:41.1891|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 12:22:41.1891|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Female
+2020-06-03 12:22:41.1891|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 2
+2020-06-03 12:22:59.2595|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:22:59.2665|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-03 12:22:59.2665|INFO|WebAppMVC.Controllers.StudentController|ModelState is valid. Updating student info
+2020-06-03 12:22:59.2665|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 2
+2020-06-03 12:22:59.2665|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 2
+2020-06-03 12:22:59.2894|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
+2020-06-03 12:22:59.2894|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-03 12:22:59.2994|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male

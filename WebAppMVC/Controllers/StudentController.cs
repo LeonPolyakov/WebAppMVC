@@ -98,11 +98,15 @@ namespace WebAppMVC.Controllers
             }
             else // could not find a valid student Id so will default to the 1st one in the list
             { 
-                int minStudentId = (from student in studentList      // select the 1st student Id from the list of student Ids                          
-                                    select student.StudentId).ToArray().Min();
+                //int minStudentId = (from student in studentList      // select the 1st student Id from the list of student Ids                          
+                //                    select student.StudentId).ToArray().Min();
+               int minStudentId = (from student in studentList // select the 1st student Id from the list of student Ids   
+                                        orderby student.StudentId descending
+                                        select student).First().StudentId;
+
 
                 UpdateModelWithTempData();   //    apply TempData values to the mock studentList database 
-                var std = studentList.Where(s => s.StudentId == minStudentId).FirstOrDefault(); //select the student from the  mock database whose Id matches the smallest one
+                var std = studentList.Where(s => s.StudentId == minStudentId).FirstOrDefault(); //select the student from the   database whose Id matches the smallest one
                 logger.Log(LogLevel.Warn, "Could not find valid student Id. Will default to Id = " + std.StudentId.ToString());
                 return View(std); // send the Student data model of the selected student to the Edit view 
             }           
@@ -129,7 +133,9 @@ namespace WebAppMVC.Controllers
             }
             else // std object is not null
             {               
-                    logger.Log(LogLevel.Info, "Updating student info");
+                logger.Log(LogLevel.Info, "Updating student info");
+                if (updateStudentInfo(std) == true)
+                {
                     TempData["StudentId"] = std.StudentId;
                     TempData["StudentFName"] = std.StudentFName;
                     TempData["StudentLname"] = std.StudentLname;
@@ -137,20 +143,70 @@ namespace WebAppMVC.Controllers
                     TempData["StudentGender"] = std.StudentGender;
                     logger.Log(LogLevel.Info, "Edited Student with ID = " + std.StudentId.ToString());
                     logger.Log(LogLevel.Info, "Added to TempData Student object " + std.StudentId.ToString());
-                    bool success = saveStudentInfo(std);
-                    if (success == true)
-                            logger.Log(LogLevel.Info, "Successfully saved student info for student" + std.StudentId.ToString());
-                    else
-                            logger.Log(LogLevel.Error, "Failed to save student info for student" + std.StudentId.ToString());
-                    return RedirectToAction("Index");              
+                    logger.Log(LogLevel.Info, "Successfully saved student info" + std.StudentId.ToString());
+                }
+                else
+                {
+                    logger.Log(LogLevel.Error, "Failed to save student info" + std.StudentId.ToString());
+                }
+                
+                return RedirectToAction("Index");              
             }        
         }
 
-       
-        public ActionResult Delete(int Id)
+        public ActionResult Create()
         {
-            // delete student from the database whose id matches with specified id
+            return View();
+            
+        }
 
+        [HttpPost]
+        public ActionResult Create(Student std)
+        {
+            logger.Log(LogLevel.Info, "In [HttpPost] Edit() Action method of Student Controller");
+            //Save the updated Student data in TempData (write code to update student record in the actual database)
+            if (std is null)
+            {
+                logger.Log(LogLevel.Error, "Student object is null" + std.StudentId.ToString());
+                throw new ArgumentNullException(nameof(std)); // the std object is null
+            }
+            else // std object is not null
+            {
+                logger.Log(LogLevel.Info, "Updating student info");
+
+                int highest_student_ID = studentList.OrderByDescending(s => s.StudentId).First().StudentId;
+                Student new_student = new Student();
+                new_student.StudentId = highest_student_ID + 1;// assign this new student the next highest ID
+                new_student.StudentFName = std.StudentFName;
+                new_student.StudentLname = std.StudentLname;
+                new_student.StudentAge = std.StudentAge;
+                new_student.StudentGender = std.StudentGender;
+
+                if (addNewStudent(new_student) == true)
+                {                   
+                    studentList.Add(new_student);
+                }
+                else
+                {
+                    logger.Log(LogLevel.Error, "Failed to save student info" + std.StudentId.ToString());
+                }
+
+                return RedirectToAction("Index");
+            }
+           
+        }
+
+        public ActionResult Delete(int Id)
+        {           
+            if (deleteStudent(Id) == true) // delete student from the database whose id matches with specified id
+            {
+                var studentToRemove = studentList.Single(r => r.StudentId == Id);
+                studentList.Remove(studentToRemove); // remove Student from studentList linked list 
+                logger.Log(LogLevel.Info, "Successfully deleted student record for student" + Id.ToString());
+            }
+            else
+                logger.Log(LogLevel.Error, "Failed to delete student record for student" + Id.ToString());
+            
             return RedirectToAction("Index");
         }
 
@@ -202,7 +258,7 @@ namespace WebAppMVC.Controllers
             
         }
 
-        private static bool saveStudentInfo(Student std)
+        private static bool updateStudentInfo(Student std)
         {
             bool success = false;
             logger.Log(LogLevel.Info, "In saveStudentInfo method" + std.StudentId.ToString());
@@ -214,16 +270,17 @@ namespace WebAppMVC.Controllers
             {
                 try
                 {
-                    logger.Log(LogLevel.Info, "Saving Student info to a DynamoDB table" + std.StudentId.ToString());
-
-                    PostStudent student = new PostStudent();
-                    student.StudentFName = std.StudentFName;
-                    student.StudentLname = std.StudentLname;
-                    student.StudentAge = std.StudentAge.ToString();
-                    student.StudentGender = std.StudentGender.ToString();
+                    logger.Log(LogLevel.Info, "Updating Student info to a DynamoDB table" + std.StudentId.ToString());
+                    var jsonStudent = new // Create my object so that I can serialize Student Info 
+                    {
+                        std.StudentFName,
+                        std.StudentLname,
+                        StudentAge = std.StudentAge.ToString(),
+                        StudentGender = std.StudentGender.ToString()
+                    };
 
                     Uri u = new Uri("https://zz4k4joszj.execute-api.us-west-2.amazonaws.com/prod/students/" + std.StudentId.ToString());
-                    var payload = JsonConvert.SerializeObject(student);
+                    var payload = JsonConvert.SerializeObject(jsonStudent);
 
                     HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
                     var t = Task.Run(() => PostURI(u, c));
@@ -241,8 +298,101 @@ namespace WebAppMVC.Controllers
                 }
             }
             return success;
+        }
+        private static bool deleteStudent(int Id)
+        {
+            bool success = false;
+            logger.Log(LogLevel.Info, "In deleteStudentInfo method" + Id.ToString());
+            if (Id < 0)
+            {
+                logger.Log(LogLevel.Error, "Student Id is invalid" + Id.ToString());
+                throw new ArgumentNullException(Id.ToString()); // the std object is null
+            }
+            else
+            {
+                try
+                {
+                    logger.Log(LogLevel.Info, "Deleteing Student info in DynamoDB table" + Id.ToString());
+                    Uri u = new Uri("https://zz4k4joszj.execute-api.us-west-2.amazonaws.com/prod/students/" + Id.ToString());
+                    var t = Task.Run(() => DeleteURI(u));
+                    t.Wait();
+                    var result = t.Result;
+                    if (result == "OK")
+                    {
+                        success = true;
+                    }                    
+                }
+                catch (Exception ex)
+                {
+                    logger.Log(LogLevel.Error, "Error deleteing student on DynamoDB" + ex.ToString());
+
+                }
+            }
+            return success;
 
         }
+
+        private static bool addNewStudent(Student std)
+        {
+            bool success = false;
+            logger.Log(LogLevel.Info, "In addNewStudent method" + std.StudentId.ToString());
+            if (std is null)
+            {
+                logger.Log(LogLevel.Error, "Student object is null" + std.StudentId.ToString());
+                throw new ArgumentNullException(nameof(std)); // the std object is null
+            }
+            else
+            {
+                try
+                {
+                    logger.Log(LogLevel.Info, "Add Student to a DynamoDB table" + std.StudentId.ToString());
+                    Uri u = new Uri("https://zz4k4joszj.execute-api.us-west-2.amazonaws.com/prod/students");
+                    var jsonStudentToAdd = new // Create my object so that I can serialize Student Info 
+                    {
+                        StudentID = std.StudentId,
+                        std.StudentFName,
+                        std.StudentLname,
+                        StudentAge = std.StudentAge.ToString(),
+                        StudentGender = std.StudentGender.ToString()                         
+                    };
+                    var payload = JsonConvert.SerializeObject(jsonStudentToAdd);
+
+                    HttpContent c = new StringContent(payload, Encoding.UTF8, "application/json");
+                    var t = Task.Run(() => PostURI(u, c));
+                    t.Wait();
+                    var result = t.Result;
+                    if (result == "Created")
+                    {
+                        success = true;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    logger.Log(LogLevel.Error, "Error adding student info to DynamoDB" + ex.ToString());
+
+                }
+            }
+            return success;
+
+        }
+
+
+        static async Task<string> DeleteURI(Uri u)
+        {
+            var response = string.Empty;
+            using (var client = new HttpClient())
+            {
+                HttpResponseMessage result = await client.DeleteAsync(u);
+                if (result.IsSuccessStatusCode)
+                {
+                    response = result.StatusCode.ToString();
+                }
+            }
+            return response;
+        }
+
+
 
         static async Task<string> PostURI(Uri u, HttpContent c)
         {
@@ -258,6 +408,7 @@ namespace WebAppMVC.Controllers
             return response;
         }
 
+       
         private static bool retrieveStudentInfo() 
         {
             bool succeeded = false;
@@ -318,18 +469,5 @@ namespace WebAppMVC.Controllers
         }
        
     }
-
-    /// <summary>
-    /// This is a helper class that maps the Student view class to the DynamoDB table data structure 
-    /// An objet of this class will be serilaized and used as  content for the student/{studentid} API endpoint 
-    /// </summary>
-    public class PostStudent
-    {
-                   
-        public string StudentFName { get; set; }
-        public string StudentLname { get; set; }       
-        public string StudentAge { get; set; }
-        public string StudentGender { get; set; }
-
-    }
+       
 }

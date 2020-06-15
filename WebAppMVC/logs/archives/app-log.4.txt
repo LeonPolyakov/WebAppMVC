@@ -1,3 +1,17 @@
-2020-06-01 12:07:25.3841|INFO|WebAppMVC.Controllers.StudentController|In Index() method of Student Controller
-2020-06-01 12:07:25.4369|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-01 12:07:25.4369|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-09 12:27:20.3391|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-09 12:27:21.9496|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-09 12:27:21.9496|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-09 12:27:29.7313|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-09 12:27:29.7712|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-09 12:27:29.7762|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-09 12:27:29.7762|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-09 12:27:29.7762|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 1
+2020-06-09 12:46:15.5720|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-09 12:46:17.1383|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-09 12:46:17.1542|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-09 12:46:21.3552|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-09 12:46:21.3981|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-09 12:46:21.3981|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-09 12:46:21.3981|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-09 12:46:21.3981|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 1
+2020-06-09 12:46:25.4177|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller

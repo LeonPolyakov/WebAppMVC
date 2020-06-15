@@ -254,6 +254,7 @@
     <Content Include="Views\Student\Find.cshtml" />
     <Content Include="Views\Student\Edit.cshtml" />
     <Content Include="Views\Shared\_HeaderNavBar.cshtml" />
+    <Content Include="Views\Student\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

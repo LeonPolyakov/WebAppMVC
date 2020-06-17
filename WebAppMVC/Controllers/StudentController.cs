@@ -12,6 +12,7 @@ using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Threading.Tasks;
 using System.Text;
+using System.Net.Http.Headers;
 
 namespace WebAppMVC.Controllers
 {
@@ -19,7 +20,7 @@ namespace WebAppMVC.Controllers
     public class StudentController : Controller
     {
                
-        static HttpClient client = new HttpClient();
+      //  static HttpClient client = new HttpClient();
         private static Logger logger = LogManager.GetCurrentClassLogger();
         private static List<Student> studentList = new List<Student>();
         bool getStudentData = retrieveStudentInfo();
@@ -173,14 +174,22 @@ namespace WebAppMVC.Controllers
             else // std object is not null
             {
                 logger.Log(LogLevel.Info, "Updating student info");
-
-                int highest_student_ID = studentList.OrderByDescending(s => s.StudentId).First().StudentId;
                 Student new_student = new Student();
-                new_student.StudentId = highest_student_ID + 1;// assign this new student the next highest ID
-                new_student.StudentFName = std.StudentFName;
-                new_student.StudentLname = std.StudentLname;
-                new_student.StudentAge = std.StudentAge;
-                new_student.StudentGender = std.StudentGender;
+                int highest_student_ID = 0;
+                if (studentList.Count > 0)
+                {
+                    highest_student_ID = studentList.OrderByDescending(s => s.StudentId).First().StudentId; // assign this new student the next highest ID
+                    new_student.StudentId = highest_student_ID + 1;
+                }
+                else // the studentList linked list is empty
+                {
+                    new_student.StudentId = 0;
+                }
+                 new_student.StudentFName = std.StudentFName;
+                 new_student.StudentLname = std.StudentLname;
+                 new_student.StudentAge = std.StudentAge;
+                 new_student.StudentGender = std.StudentGender;
+                
 
                 if (addNewStudent(new_student) == true)
                 {                   
@@ -202,6 +211,7 @@ namespace WebAppMVC.Controllers
             {
                 var studentToRemove = studentList.Single(r => r.StudentId == Id);
                 studentList.Remove(studentToRemove); // remove Student from studentList linked list 
+                TempData.Clear(); // Remove All TempData because we have removed Student info from studentList
                 logger.Log(LogLevel.Info, "Successfully deleted student record for student" + Id.ToString());
             }
             else
@@ -383,6 +393,7 @@ namespace WebAppMVC.Controllers
             var response = string.Empty;
             using (var client = new HttpClient())
             {
+                client.DefaultRequestHeaders.Add("x-api-key", "3RM7vABmXc3dyKCfjvR6034BRi3M4TZl5zOSqkEE");// thus API endpoint is protected by this Api Key
                 HttpResponseMessage result = await client.DeleteAsync(u);
                 if (result.IsSuccessStatusCode)
                 {
@@ -399,6 +410,7 @@ namespace WebAppMVC.Controllers
             var response = string.Empty;
             using (var client = new HttpClient())
             {
+                client.DefaultRequestHeaders.Add("x-api-key", "3RM7vABmXc3dyKCfjvR6034BRi3M4TZl5zOSqkEE");
                 HttpResponseMessage result = await client.PostAsync(u, c);
                 if (result.IsSuccessStatusCode)
                 {
@@ -418,6 +430,7 @@ namespace WebAppMVC.Controllers
                 string url = string.Format("https://zz4k4joszj.execute-api.us-west-2.amazonaws.com/prod/students");
                 HttpClient client = new HttpClient();
                 client.DefaultRequestHeaders.Add("Accept", "application/json");
+                client.DefaultRequestHeaders.Add("x-api-key", "3RM7vABmXc3dyKCfjvR6034BRi3M4TZl5zOSqkEE");
                 try
                 {
                     var jsonString = client.GetStringAsync(url).Result; // retrieve the contents of the Dynamo database Students table as a json string
@@ -456,9 +469,9 @@ namespace WebAppMVC.Controllers
                     }
                     succeeded = true;
                 }
-                catch
+                catch (Exception ex)
                 {
-                    logger.Log(LogLevel.Error, "Unable to retrieve or parse Student info Json from AWS DynamoDB");
+                    logger.Log(LogLevel.Error, "Unable to retrieve or parse Student info Json from AWS DynamoDB because of " + ex.ToString());
                 }
             }
             else {

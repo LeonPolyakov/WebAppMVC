@@ -1,85 +1,46 @@
-2020-06-17 07:49:51.3179|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:49:53.0230|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-17 07:49:53.0230|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-06-17 07:49:59.0509|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:49:59.0898|INFO|WebAppMVC.Controllers.StudentController|In deleteStudentInfo method0
-2020-06-17 07:49:59.0898|INFO|WebAppMVC.Controllers.StudentController|Deleteing Student info in DynamoDB table0
-2020-06-17 07:50:00.5123|INFO|WebAppMVC.Controllers.StudentController|Successfully deleted student record for student0
-2020-06-17 07:50:00.5551|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:50:01.0927|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-17 07:50:01.1096|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-06-17 07:50:03.0607|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:50:12.0284|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:50:12.7175|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-06-17 07:50:12.7175|INFO|WebAppMVC.Controllers.StudentController|Updating student info
-2020-06-17 07:50:12.7315|INFO|WebAppMVC.Controllers.StudentController|In addNewStudent method0
-2020-06-17 07:50:12.7315|INFO|WebAppMVC.Controllers.StudentController|Add Student to a DynamoDB table0
-2020-06-17 07:50:14.1857|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:50:14.2027|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-17 07:50:14.2136|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-06-17 07:50:15.8445|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:50:24.5013|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:50:24.5013|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-06-17 07:50:24.5103|INFO|WebAppMVC.Controllers.StudentController|Updating student info
-2020-06-17 07:50:24.5103|INFO|WebAppMVC.Controllers.StudentController|In addNewStudent method1
-2020-06-17 07:50:24.5103|INFO|WebAppMVC.Controllers.StudentController|Add Student to a DynamoDB table1
-2020-06-17 07:50:25.0526|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:50:25.0616|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-17 07:50:25.0616|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-06-17 07:50:28.1063|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:50:28.1063|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-06-17 07:50:28.1203|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-17 07:50:28.1203|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-06-17 07:50:28.1203|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 1
-2020-06-17 07:50:32.0304|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:50:32.0304|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-06-17 07:50:32.0414|INFO|WebAppMVC.Controllers.StudentController|Updating student info
-2020-06-17 07:50:32.0414|INFO|WebAppMVC.Controllers.StudentController|In saveStudentInfo method1
-2020-06-17 07:50:32.0414|INFO|WebAppMVC.Controllers.StudentController|Updating Student info to a DynamoDB table1
-2020-06-17 07:50:33.6421|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 1
-2020-06-17 07:50:33.6591|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 1
-2020-06-17 07:50:33.6750|INFO|WebAppMVC.Controllers.StudentController|Successfully saved student info1
-2020-06-17 07:50:33.6941|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:50:33.6941|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-17 07:50:43.6080|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
-2020-06-17 07:50:47.6985|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:50:47.6985|INFO|WebAppMVC.Controllers.StudentController|In deleteStudentInfo method1
-2020-06-17 07:50:47.7105|INFO|WebAppMVC.Controllers.StudentController|Deleteing Student info in DynamoDB table1
-2020-06-17 07:50:48.1863|INFO|WebAppMVC.Controllers.StudentController|Successfully deleted student record for student1
-2020-06-17 07:50:48.2043|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:50:48.2153|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-17 07:58:15.2534|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:58:15.6527|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-17 07:58:15.6527|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-06-17 07:58:17.9561|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:58:27.7566|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:58:27.7985|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-06-17 07:58:27.8045|INFO|WebAppMVC.Controllers.StudentController|Updating student info
-2020-06-17 07:58:27.8045|INFO|WebAppMVC.Controllers.StudentController|In addNewStudent method1
-2020-06-17 07:58:27.8045|INFO|WebAppMVC.Controllers.StudentController|Add Student to a DynamoDB table1
-2020-06-17 07:58:28.4554|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:58:28.4663|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-17 07:58:28.4773|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-06-17 07:58:32.6280|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:58:32.6350|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
-2020-06-17 07:58:32.6350|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-17 07:58:32.6350|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
-2020-06-17 07:58:32.6479|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 1
-2020-06-17 07:58:36.0087|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:58:36.0087|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
-2020-06-17 07:58:36.0087|INFO|WebAppMVC.Controllers.StudentController|Updating student info
-2020-06-17 07:58:36.0267|INFO|WebAppMVC.Controllers.StudentController|In saveStudentInfo method1
-2020-06-17 07:58:36.0267|INFO|WebAppMVC.Controllers.StudentController|Updating Student info to a DynamoDB table1
-2020-06-17 07:58:36.6182|INFO|WebAppMVC.Controllers.StudentController|Edited Student with ID = 1
-2020-06-17 07:58:36.6182|INFO|WebAppMVC.Controllers.StudentController|Added to TempData Student object 1
-2020-06-17 07:58:36.6411|INFO|WebAppMVC.Controllers.StudentController|Successfully saved student info1
-2020-06-17 07:58:36.6521|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:58:36.6521|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-17 07:58:39.6654|INFO|WebAppMVC.Controllers.StudentController|Parsing Student gender = Male
-2020-06-17 07:58:45.7646|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:58:45.7646|INFO|WebAppMVC.Controllers.StudentController|In deleteStudentInfo method1
-2020-06-17 07:58:45.7756|INFO|WebAppMVC.Controllers.StudentController|Deleteing Student info in DynamoDB table1
-2020-06-17 07:58:46.4219|INFO|WebAppMVC.Controllers.StudentController|Successfully deleted student record for student1
-2020-06-17 07:58:46.4308|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
-2020-06-17 07:58:46.4308|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
-2020-06-17 07:58:46.4308|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-18 11:18:31.5109|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 11:18:33.2976|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-18 11:18:33.3136|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-18 11:27:48.5856|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 11:27:52.0178|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 11:27:52.0178|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-18 11:27:52.0297|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-18 11:27:56.8513|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 11:28:06.0416|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 11:28:06.0934|INFO|WebAppMVC.Controllers.StudentController|In [HttpPost] Edit() Action method of Student Controller
+2020-06-18 11:28:06.0934|INFO|WebAppMVC.Controllers.StudentController|Updating student info
+2020-06-18 11:28:06.0934|INFO|WebAppMVC.Controllers.StudentController|In addNewStudent method1
+2020-06-18 11:28:06.1054|INFO|WebAppMVC.Controllers.StudentController|Add Student to a DynamoDB table1
+2020-06-18 11:28:07.6248|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 11:28:07.6377|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-18 11:28:07.6377|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-18 11:31:23.9352|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 11:31:30.2170|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 11:31:30.2170|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-18 11:31:30.2309|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-18 18:12:21.0553|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 18:12:21.6402|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-18 18:12:21.6402|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-18 18:12:21.6402|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-18 18:12:21.6542|WARN|WebAppMVC.Controllers.StudentController|Could not find valid student Id. Will default to Id = 3
+2020-06-18 18:12:26.2792|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 18:12:26.2792|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-18 18:12:26.2792|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-18 18:12:30.4230|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 18:12:30.4330|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-18 18:12:30.4330|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-18 18:12:30.4330|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-18 18:12:30.4330|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 3
+2020-06-18 18:12:33.1591|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 18:12:33.1591|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-18 18:12:33.1701|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-18 18:12:34.5679|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 18:12:34.5679|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller
+2020-06-18 18:12:34.5789|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-18 18:12:34.5789|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-18 18:12:34.5789|INFO|WebAppMVC.Controllers.StudentController|Editing Student with ID = 2
+2020-06-18 18:12:36.9663|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 18:12:36.9663|INFO|WebAppMVC.Controllers.StudentController|In UpdateModelWithTempData() method of Student Controller
+2020-06-18 18:12:36.9663|WARN|WebAppMVC.Controllers.StudentController|TempData Not available
+2020-06-18 18:13:10.6468|INFO|WebAppMVC.Controllers.StudentController|In retrieveStudentInfo()  method of Student Controller
+2020-06-18 18:13:10.6518|INFO|WebAppMVC.Controllers.StudentController|In Edit() Action method of Student Controller

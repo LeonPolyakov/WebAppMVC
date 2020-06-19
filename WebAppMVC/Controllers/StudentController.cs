@@ -226,15 +226,21 @@ namespace WebAppMVC.Controllers
         void UpdateModelWithTempData()
         {
             logger.Log(LogLevel.Info, "In UpdateModelWithTempData() method of Student Controller");
-            string sName, sGender, sId, sAge;
+            string sFname, sLname, sGender, sId, sAge;
 
             if (TempData.ContainsKey("StudentId") && TempData["StudentId"] != null) //if we have a student Id that is not null
             {
                 sId = TempData["StudentId"].ToString(); // extract student Id from TempData
-                if (TempData.ContainsKey("StudentName") && (TempData["StudentName"] != null)) //if we have a student name that is not null
+                if (TempData.ContainsKey("StudentFName") && (TempData["StudentFName"] != null)) //if we have a student first name that is not null
                 {
-                    sName = TempData["StudentFName"].ToString(); // extract student Name from TempData
-                    studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().StudentFName = sName; //assign TempData studentName to the matching student object in  studentList
+                    sFname = TempData["StudentFName"].ToString(); // extract student Name from TempData
+                    studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().StudentFName = sFname; //assign TempData student first Name to the matching student object in  studentList
+                }
+
+                if (TempData.ContainsKey("StudentLname") && (TempData["StudentLname"] != null)) //if we have a student last name that is not null
+                {
+                    sLname = TempData["StudentLname"].ToString(); // extract student Name from TempData
+                    studentList.Where(s => s.StudentId == Int32.Parse(sId)).First().StudentLname = sLname; //assign TempData student last Name to the matching student object in  studentList
                 }
 
                 if (TempData.ContainsKey("StudentAge") && (TempData["StudentAge"] != null))
